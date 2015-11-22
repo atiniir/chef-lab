@@ -76,7 +76,7 @@ EOF
   config.vm.define "gitlab" do |gitlab|
     gitlab.vm.box = "bento/centos-6.7"
     # if this is false have to run 'vagrant box outdated' to find updates
-    ci.vm.box_check_update = true
+    gitlab.vm.box_check_update = true
     gitlab.vm.hostname = "lab-gitlab"
 
     # Create a private network, which allows host-only access to the machine
@@ -97,7 +97,7 @@ EOF
     chefdk.vm.network "private_network", ip: "192.168.10.20"
 
         # Enable provisioning with a shell script. 
-    ci.vm.provision "shell", inline: <<-SHELL
+    chefdk.vm.provision "shell", inline: <<-SHELL
 
     /bin/cat > client.rb <<EOF
       log_level        :info
