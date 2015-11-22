@@ -1,0 +1,82 @@
+##################################################
+## 
+##      GITLAB 
+##
+##################################################
+
+    sudo yum -y install curl openssh-server postfix cronie;sudo service postfix start
+    sudo chkconfig postfix on;sudo lokkit -s http -s ssh
+    curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash ; sudo yum -y install gitlab-ce
+    sudo gitlab-ctl reconfigure
+
+    -- browse site 192.168.10.17  (root/5iveL!fe)
+    -- great group (whare)
+    -- create user (kristan)
+    -- add ssh key for user  (from local ~/.ssh/id_rsa.pub)
+    -- create project 
+    -- verify ssh cmdline to gitlab server from client 
+
+      -- git config --global user.name "Kristan Stewart"  
+      -- git config --global user.email "kristan.stewart@gmail.com"
+
+http://doc.gitlab.com/ce/ssh/README.html
+
+
+##################################################
+## 
+##      JENKINS 
+##
+##################################################
+
+   sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+   sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+   sudo yum -y install jenkins java
+   sudo service jenkins start
+   
+   sudo vi /etc/sysconfig/jenkins
+   -- change port to 8585
+
+   sudo tail vi /var/log/jenkins/jenkins.log
+   -- check it started ok 
+   -- verify loads http://192.168.10.18:8585/
+
+   sudo chkconfig jenkins on
+
+
+
+##################################################
+## 
+##      CHEF 
+##
+##################################################
+   
+   wget https://packagecloud.io/chef/stable/packages/el/5/chef-server-core-12.3.0-1.el5.x86_64.rpm/download -O chef-server-core-12.3.0-1.el5.x86_64.rpm 
+   ? mv download chef-server-core-12.3.0-1.el5.x86_64.rpm
+   
+   sudo rpm -Uvh chef-server-core-12.3.0-1.el5.x86_64.rpm
+   sudo chef-server-ctl reconfigure
+   
+   sudo chef-server-ctl user-create kristan Kristan Stewart kristan.stewart@gmail.com Ch3fC#ef --filename ~/chef-kristan.pem
+
+   sudo chef-server-ctl org-create whare "Noury Whare" --association_user kristan --filename ~/chef-whare-validator.pem
+
+   -- copy chef-kristan.pem and chef-whare-validator.pem to  dir on local (in .chef)
+   -- copy knife.rb (below) to dir on local (in .chef)
+   -- edit local /etc/hosts with   192.168.10.18  argentum-ci
+   -- verify with knife client list 
+
+      ##**************************************************
+      ##
+      ##     CHEF :: KNIFE.RB 
+      ##
+      ##**************************************************
+
+      current_dir = File.dirname(__FILE__)
+      log_level                :info
+      log_location             STDOUT
+      node_name                "kristan"
+      client_key               "#{current_dir}/kristan.pem"
+      validation_client_name   "whare-validator"
+      validation_key           "#{current_dir}/whare-validator.pem"
+      chef_server_url          "https://argentum-ci/organizations/whare"
+      #cookbook_path            ["#{current_dir}/chef-repo/cookbooks/"]

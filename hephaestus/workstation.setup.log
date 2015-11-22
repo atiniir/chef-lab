@@ -1,0 +1,11 @@
+
+
+wget https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chefdk-0.10.0-1.el6.x86_64.rpm -O chefdk-0.10.0-1.el6.x86_64.rpm
+
+sudo rpm -Uvh chefdk-0.10.0-1.el6.x86_64.rpm
+echo 'eval "$(chef shell-init bash)"' >> ~/.bash_profile
+
+sudo yum -y install git
+
+scp -r .chef vagrant@aurum:/home/vagrant/
+scp .gitconfig vagrant@aurum:/home/vagrant
