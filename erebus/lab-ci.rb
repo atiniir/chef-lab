@@ -5,8 +5,8 @@ options = {
   	'vm.box' => 'bento/centos-6.7',
 #  	'vm.ram' => '1G',
 #	'vm.cpus' => '1',
-    'vm.hostname' => 'aurum',
-    'vm.network' => '"private_network", ip: "192.168.10.20"'
+    'vm.hostname' => 'lab-ci',
+    'vm.network' => '"private_network", ip: "192.168.10.18"'
   },
 }
 
@@ -14,8 +14,6 @@ machine 'aurum' do
   tag 'gold'
   machine_options options
   converge true
-  recipe 'example'
-  recipe 'example::hello'
-  recipe 'kris::workstation'
+  recipe 'kris::ci'
 end
 

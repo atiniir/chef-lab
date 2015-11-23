@@ -75,11 +75,11 @@
       "/dev/disk1": {
         "block_size": 512,
         "kb_size": 243915136,
-        "kb_used": 112578056,
-        "kb_available": 131081080,
+        "kb_used": 113715976,
+        "kb_available": 129943160,
         "percent_used": "47%",
-        "inodes_used": "28208512",
-        "inodes_available": "32770270",
+        "inodes_used": "28492992",
+        "inodes_available": "32485790",
         "total_inodes": "60978782",
         "mount": "/",
         "fs_type": "hfs",
@@ -90,13 +90,13 @@
       },
       "devfs": {
         "block_size": 512,
-        "kb_size": 185,
-        "kb_used": 185,
+        "kb_size": 183,
+        "kb_used": 183,
         "kb_available": 0,
         "percent_used": "100%",
-        "inodes_used": "643",
+        "inodes_used": "636",
         "inodes_available": "0",
-        "total_inodes": "643",
+        "total_inodes": "636",
         "mount": "/dev",
         "fs_type": "devfs",
         "mount_options": [
@@ -809,9 +809,9 @@
     },
     "memory": {
       "total": "8192MB",
-      "active": "4841MB",
-      "inactive": "928MB",
-      "free": "2422MB"
+      "active": "4462MB",
+      "inactive": "1494MB",
+      "free": "2234MB"
     },
     "network": {
       "interfaces": {
@@ -907,6 +907,7 @@
           "number": "0",
           "encapsulation": "Ethernet",
           "arp": {
+            "192.168.1.75": "54:72:4f:94:f:26",
             "192.168.1.79": "50:1a:c5:b4:a8:b9",
             "192.168.1.254": "4c:8b:30:38:73:c0"
           }
@@ -1055,7 +1056,10 @@
           ],
           "type": "vboxnet",
           "number": "2",
-          "encapsulation": "Ethernet"
+          "encapsulation": "Ethernet",
+          "arp": {
+            "192.168.10.20": "8:0:27:93:94:41"
+          }
         }
       },
       "default_gateway": "192.168.1.254",
@@ -1206,8 +1210,8 @@
         "net.inet.tcp.fastopen_fallback_min": "10",
         "net.inet.tcp.minmss": "216",
         "net.inet.tcp.do_tcpdrain": "0",
-        "net.inet.tcp.pcbcount": "111",
-        "net.inet.tcp.tw_pcbcount": "0",
+        "net.inet.tcp.pcbcount": "71",
+        "net.inet.tcp.tw_pcbcount": "1",
         "net.inet.tcp.icmp_may_rst": "1",
         "net.inet.tcp.rtt_min": "100",
         "net.inet.tcp.rexmt_slop": "200",
@@ -1221,14 +1225,14 @@
         "net.inet.tcp.timer_fastmode_idlemax": "10",
         "net.inet.tcp.broken_peer_syn_rexmit_thres": "10",
         "net.inet.tcp.tcp_timer_advanced": "25",
-        "net.inet.tcp.tcp_resched_timerlist": "158110",
+        "net.inet.tcp.tcp_resched_timerlist": "158723",
         "net.inet.tcp.pmtud_blackhole_detection": "1",
         "net.inet.tcp.pmtud_blackhole_mss": "1200",
         "net.inet.tcp.preconn_sbsz": "1024",
         "net.inet.tcp.cc_debug": "0",
         "net.inet.tcp.newreno_sockets": "0",
         "net.inet.tcp.background_sockets": "0",
-        "net.inet.tcp.cubic_sockets": "85",
+        "net.inet.tcp.cubic_sockets": "62",
         "net.inet.tcp.use_newreno": "0",
         "net.inet.tcp.cubic_tcp_friendliness": "0",
         "net.inet.tcp.cubic_fast_convergence": "0",
@@ -1244,7 +1248,7 @@
         "net.inet.udp.recvspace": "196724",
         "net.inet.udp.log_in_vain": "0",
         "net.inet.udp.blackhole": "0",
-        "net.inet.udp.pcbcount": "84",
+        "net.inet.udp.pcbcount": "93",
         "net.inet.udp.randomize_ports": "1",
         "net.inet.ipsec.def_policy": "1",
         "net.inet.ipsec.esp_trans_deflev": "1",
@@ -1261,7 +1265,7 @@
         "net.inet.ipsec.esp_port": "4500",
         "net.inet.raw.maxdgram": "8192",
         "net.inet.raw.recvspace": "8192",
-        "net.inet.raw.pcbcount": "0",
+        "net.inet.raw.pcbcount": "1",
         "net.inet.mptcp.enable": "1",
         "net.inet.mptcp.mptcp_cap_retr": "2",
         "net.inet.mptcp.dss_csum": "0",
@@ -1517,9 +1521,9 @@
         "interfaces": {
           "lo0": {
             "rx": {
-              "bytes": "1605815",
+              "bytes": "1624370",
               "packets": "0",
-              "errors": "1366624632",
+              "errors": "1457460106",
               "drop": 0,
               "overrun": 0,
               "frame": 0,
@@ -1529,7 +1533,7 @@
             "tx": {
               "bytes": "0",
               "packets": "0",
-              "errors": "1366624632",
+              "errors": "1457460106",
               "drop": 0,
               "overrun": 0,
               "collisions": "0",
@@ -1583,8 +1587,8 @@
           },
           "en0": {
             "rx": {
-              "bytes": "10433822787",
-              "packets": "8287618",
+              "bytes": "10435251560",
+              "packets": "8290491",
               "errors": "0",
               "drop": 0,
               "overrun": 0,
@@ -1593,8 +1597,8 @@
               "multicast": 0
             },
             "tx": {
-              "bytes": "525787855",
-              "packets": "3545217",
+              "bytes": "526233651",
+              "packets": "3547649",
               "errors": "0",
               "drop": 0,
               "overrun": 0,
@@ -1769,8 +1773,8 @@
     "platform_version": "10.11.1",
     "platform_build": "15B42",
     "platform_family": "mac_os_x",
-    "uptime_seconds": 808308,
-    "uptime": "9 days 08 hours 31 minutes 48 seconds",
+    "uptime_seconds": 809399,
+    "uptime": "9 days 08 hours 49 minutes 59 seconds",
     "virtualization": {
       "systems": {
 
@@ -1833,13 +1837,13 @@
         "/dev/disk1": {
           "block_size": 512,
           "kb_size": "243915136",
-          "kb_used": "112610808",
-          "kb_available": "131048328",
+          "kb_used": "113711868",
+          "kb_available": "129947268",
           "percent_used": "47%",
-          "inodes_used": "28216700",
-          "inodes_available": "32762082",
+          "inodes_used": "28491965",
+          "inodes_available": "32486817",
           "total_inodes": "60978782",
-          "inodes_percent_used": "46%",
+          "inodes_percent_used": "47%",
           "fs_type": "hfs",
           "mount_options": [
             "local",
@@ -1851,13 +1855,13 @@
         },
         "devfs": {
           "block_size": 512,
-          "kb_size": "185",
-          "kb_used": "185",
+          "kb_size": "183",
+          "kb_used": "183",
           "kb_available": "0",
           "percent_used": "100%",
-          "inodes_used": "643",
+          "inodes_used": "636",
           "inodes_available": "0",
-          "total_inodes": "643",
+          "total_inodes": "636",
           "inodes_percent_used": "100%",
           "fs_type": "devfs",
           "mount_options": [
@@ -1933,13 +1937,13 @@
         "/": {
           "block_size": 512,
           "kb_size": "243915136",
-          "kb_used": "112610808",
-          "kb_available": "131048328",
+          "kb_used": "113711868",
+          "kb_available": "129947268",
           "percent_used": "47%",
-          "inodes_used": "28216700",
-          "inodes_available": "32762082",
+          "inodes_used": "28491965",
+          "inodes_available": "32486817",
           "total_inodes": "60978782",
-          "inodes_percent_used": "46%",
+          "inodes_percent_used": "47%",
           "fs_type": "hfs",
           "mount_options": [
             "local",
@@ -1951,13 +1955,13 @@
         },
         "/dev": {
           "block_size": 512,
-          "kb_size": "185",
-          "kb_used": "185",
+          "kb_size": "183",
+          "kb_used": "183",
           "kb_available": "0",
           "percent_used": "100%",
-          "inodes_used": "643",
+          "inodes_used": "636",
           "inodes_available": "0",
-          "total_inodes": "643",
+          "total_inodes": "636",
           "inodes_percent_used": "100%",
           "fs_type": "devfs",
           "mount_options": [
@@ -2034,13 +2038,13 @@
           "block_size": 512,
           "device": "/dev/disk1",
           "kb_size": "243915136",
-          "kb_used": "112610808",
-          "kb_available": "131048328",
+          "kb_used": "113711868",
+          "kb_available": "129947268",
           "percent_used": "47%",
-          "inodes_used": "28216700",
-          "inodes_available": "32762082",
+          "inodes_used": "28491965",
+          "inodes_available": "32486817",
           "total_inodes": "60978782",
-          "inodes_percent_used": "46%",
+          "inodes_percent_used": "47%",
           "mount": "/",
           "fs_type": "hfs",
           "mount_options": [
@@ -2051,13 +2055,13 @@
         "devfs,/dev": {
           "block_size": 512,
           "device": "devfs",
-          "kb_size": "185",
-          "kb_used": "185",
+          "kb_size": "183",
+          "kb_used": "183",
           "kb_available": "0",
           "percent_used": "100%",
-          "inodes_used": "643",
+          "inodes_used": "636",
           "inodes_available": "0",
-          "total_inodes": "643",
+          "total_inodes": "636",
           "inodes_percent_used": "100%",
           "mount": "/dev",
           "fs_type": "devfs",
@@ -2135,8 +2139,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.03773003816604614,
-        "_SPResponseTime": 0.15997099876403809,
+        "_SPCompletionInterval": 0.03873997926712036,
+        "_SPResponseTime": 0.1659260392189026,
         "_dataType": "SPAirPortData",
         "_items": [
 
@@ -2151,8 +2155,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06098198890686035,
-        "_SPResponseTime": 0.21482199430465698,
+        "_SPCompletionInterval": 0.07032495737075806,
+        "_SPResponseTime": 0.21870803833007812,
         "_dataType": "SPAudioData",
         "_items": [
 
@@ -2167,8 +2171,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.05856102705001831,
-        "_SPResponseTime": 0.2163679599761963,
+        "_SPCompletionInterval": 0.062328994274139404,
+        "_SPResponseTime": 0.21657496690750122,
         "_dataType": "SPBluetoothData",
         "_items": [
 
@@ -2183,8 +2187,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.062794029712677,
-        "_SPResponseTime": 0.21480000019073486,
+        "_SPCompletionInterval": 0.07066601514816284,
+        "_SPResponseTime": 0.21895498037338257,
         "_dataType": "SPCardReaderData",
         "_items": [
 
@@ -2199,8 +2203,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06223398447036743,
-        "_SPResponseTime": 0.21531802415847778,
+        "_SPCompletionInterval": 0.05931198596954346,
+        "_SPResponseTime": 0.2152869701385498,
         "_dataType": "SPDiagnosticsData",
         "_items": [
 
@@ -2215,8 +2219,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06224095821380615,
-        "_SPResponseTime": 0.21508902311325073,
+        "_SPCompletionInterval": 0.060873985290527344,
+        "_SPResponseTime": 0.21529901027679443,
         "_dataType": "SPDiscBurningData",
         "_items": [
 
@@ -2231,8 +2235,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06227898597717285,
-        "_SPResponseTime": 0.21666300296783447,
+        "_SPCompletionInterval": 0.060693979263305664,
+        "_SPResponseTime": 0.21235305070877075,
         "_dataType": "SPDisplaysData",
         "_items": [
 
@@ -2247,8 +2251,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06046497821807861,
-        "_SPResponseTime": 0.2147420048713684,
+        "_SPCompletionInterval": 0.059832990169525146,
+        "_SPResponseTime": 0.2152310013771057,
         "_dataType": "SPEthernetData",
         "_items": [
 
@@ -2263,8 +2267,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06023597717285156,
-        "_SPResponseTime": 0.21446800231933594,
+        "_SPCompletionInterval": 0.06115800142288208,
+        "_SPResponseTime": 0.21521800756454468,
         "_dataType": "SPFibreChannelData",
         "_items": [
 
@@ -2279,8 +2283,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06220901012420654,
-        "_SPResponseTime": 0.2169100046157837,
+        "_SPCompletionInterval": 0.06292504072189331,
+        "_SPResponseTime": 0.2124750018119812,
         "_dataType": "SPFireWireData",
         "_items": [
 
@@ -2295,8 +2299,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.05766195058822632,
-        "_SPResponseTime": 0.18980997800827026,
+        "_SPCompletionInterval": 0.05557703971862793,
+        "_SPResponseTime": 0.18494802713394165,
         "_dataType": "SPHardwareDataType",
         "_detailLevel": "-2",
         "_items": [
@@ -2449,7 +2453,7 @@
             "_detailLevel": "0"
           }
         },
-        "_timeStamp": "2015-11-22T07:52:17+00:00",
+        "_timeStamp": "2015-11-22T08:10:28+00:00",
         "_versionInfo": {
           "com.apple.SystemProfiler.SPPlatformReporter": "1445"
         }
@@ -2463,8 +2467,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06255197525024414,
-        "_SPResponseTime": 0.2168319821357727,
+        "_SPCompletionInterval": 0.06204897165298462,
+        "_SPResponseTime": 0.2128150463104248,
         "_dataType": "SPHardwareRAIDData",
         "_items": [
 
@@ -2479,8 +2483,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06288403272628784,
-        "_SPResponseTime": 0.21679699420928955,
+        "_SPCompletionInterval": 0.06039196252822876,
+        "_SPResponseTime": 0.2134450078010559,
         "_dataType": "SPMemoryData",
         "_items": [
 
@@ -2495,8 +2499,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06135505437850952,
-        "_SPResponseTime": 0.21945297718048096,
+        "_SPCompletionInterval": 0.05749702453613281,
+        "_SPResponseTime": 0.21417301893234253,
         "_dataType": "SPModemData",
         "_items": [
 
@@ -2511,8 +2515,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06444400548934937,
-        "_SPResponseTime": 0.21997898817062378,
+        "_SPCompletionInterval": 0.06186801195144653,
+        "_SPResponseTime": 0.21411800384521484,
         "_dataType": "SPNetworkData",
         "_items": [
 
@@ -2527,8 +2531,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06181001663208008,
-        "_SPResponseTime": 0.2190210223197937,
+        "_SPCompletionInterval": 0.0618780255317688,
+        "_SPResponseTime": 0.22201400995254517,
         "_dataType": "SPPCIData",
         "_items": [
 
@@ -2543,8 +2547,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06106799840927124,
-        "_SPResponseTime": 0.21482199430465698,
+        "_SPCompletionInterval": 0.0626409649848938,
+        "_SPResponseTime": 0.2165759801864624,
         "_dataType": "SPParallelATAData",
         "_items": [
 
@@ -2559,8 +2563,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06216001510620117,
-        "_SPResponseTime": 0.21901702880859375,
+        "_SPCompletionInterval": 0.06247001886367798,
+        "_SPResponseTime": 0.21420300006866455,
         "_dataType": "SPParallelSCSIData",
         "_items": [
 
@@ -2575,8 +2579,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06385397911071777,
-        "_SPResponseTime": 0.21362197399139404,
+        "_SPCompletionInterval": 0.06410002708435059,
+        "_SPResponseTime": 0.21735602617263794,
         "_dataType": "SPPrintersData",
         "_items": [
 
@@ -2591,8 +2595,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06212204694747925,
-        "_SPResponseTime": 0.21245896816253662,
+        "_SPCompletionInterval": 0.06926196813583374,
+        "_SPResponseTime": 0.21762502193450928,
         "_dataType": "SPPrintersSoftwareData",
         "_items": [
 
@@ -2607,8 +2611,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.061762988567352295,
-        "_SPResponseTime": 0.21246296167373657,
+        "_SPCompletionInterval": 0.06331300735473633,
+        "_SPResponseTime": 0.2173609733581543,
         "_dataType": "SPSASData",
         "_items": [
 
@@ -2623,8 +2627,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06027495861053467,
-        "_SPResponseTime": 0.2118690013885498,
+        "_SPCompletionInterval": 0.06002497673034668,
+        "_SPResponseTime": 0.21176499128341675,
         "_dataType": "SPSerialATAData",
         "_items": [
 
@@ -2639,8 +2643,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06086897850036621,
-        "_SPResponseTime": 0.21484601497650146,
+        "_SPCompletionInterval": 0.06285500526428223,
+        "_SPResponseTime": 0.21446198225021362,
         "_dataType": "SPSoftwareData",
         "_items": [
 
@@ -2655,8 +2659,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06072300672531128,
-        "_SPResponseTime": 0.21439999341964722,
+        "_SPCompletionInterval": 0.06546300649642944,
+        "_SPResponseTime": 0.21578198671340942,
         "_dataType": "SPThunderboltData",
         "_items": [
 
@@ -2671,8 +2675,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.06040799617767334,
-        "_SPResponseTime": 0.2134619951248169,
+        "_SPCompletionInterval": 0.06223702430725098,
+        "_SPResponseTime": 0.2144489884376526,
         "_dataType": "SPUSBData",
         "_items": [
 
@@ -2687,8 +2691,8 @@
           "-detailLevel",
           "full"
         ],
-        "_SPCompletionInterval": 0.0602259635925293,
-        "_SPResponseTime": 0.2134609818458557,
+        "_SPCompletionInterval": 0.06155598163604736,
+        "_SPResponseTime": 0.21252399682998657,
         "_dataType": "SPWWANData",
         "_items": [
 
@@ -2707,7 +2711,7 @@
 
       }
     },
-    "ohai_time": 1448178737.612958,
+    "ohai_time": 1448179829.0769548,
     "etc": {
       "passwd": {
         "_amavisd": {
