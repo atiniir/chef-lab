@@ -8,4 +8,4 @@ client_key               "#{current_dir}/kristan.pem"
 validation_client_name   "whare-validator"
 validation_key           "#{current_dir}/whare-validator.pem"
 chef_server_url          "https://argentum-ci/organizations/whare"
-#cookbook_path            ["#{current_dir}/chef-repo/cookbooks/"]
+cookbook_path            ["#{current_dir}/../../chef-repo/cookbooks/"]

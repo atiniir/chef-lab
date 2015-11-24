@@ -1,32 +1,20 @@
 
 # install chef server and jenkins 
+include_recipe 'java'
+include_recipe 'jenkins::master'
+include_recipe 'chef-server'
+include_recipe 'chef-server::addons'
+#include_recipe 'git'
 
 
-#    {
-#      "chef-server": {
-#      "configuration": "notification_email 'kstewart@ea.com'",
-#      "addons": [
-#         "manage"
-#       ]
-#       },
-#       "run_list":[
-#       "recipe[chef-server::default]","recipe[chef-server::addons]"
-#       ]
-#    }
+# KS TODO should really load the plugin list from another file or something
 
+jenkins_plugin 'log-parser'
+jenkins_plugin 'git'
 
-      # install chef-solo
-#      curl -L https://www.chef.io/chef/install.sh | sudo bash
-#      # create required bootstrap dirs/files
-#      sudo mkdir -p /var/chef/cache /var/chef/cookbooks
-#      # pull down the main cookbooks we want
-#      wget -qO- https://supermarket.chef.io/cookbooks/java/download  | sudo tar xvzC /var/chef/cookbooks
-#      wget -qO- https://supermarket.chef.io/cookbooks/jenkins/download | sudo tar xvzC /var/chef/cookbooks
-#      wget -qO- https://supermarket.chef.io/cookbooks/chef-server/download | sudo tar xvzC /var/chef/cookbooks
-#      # pull down dependency cookbooks
-#      for dep in chef-ingredient yum-chef yum apt-chef apt packagecloud runit
-#      do
-#        wget -qO- https://supermarket.chef.io/cookbooks/${dep}/download | sudo tar xvzC /var/chef/cookbooks
-#      done
-#      # GO GO GO!!!
-#     sudo chef-client -z -j settings.json -c client.rb
+# restart so plugins are found 
+jenkins_command 'safe-restart'
+
+# KS TODO - add credential setup  basic and LDAP 
+
+# KS TODO - add config of system (java path? or something?)

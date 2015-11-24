@@ -7,6 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-file '~/hello.txt' do
+file 'hello.txt' do
 	  content 'Welcome to Chef'
 end

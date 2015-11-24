@@ -14,8 +14,6 @@ machine 'aurum' do
   tag 'gold'
   machine_options options
   converge true
-  recipe 'example'
-  recipe 'example::hello'
   recipe 'kris::workstation'
 end
 

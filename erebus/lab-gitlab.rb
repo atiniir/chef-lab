@@ -10,8 +10,8 @@ options = {
   },
 }
 
-machine 'aurum' do
-  tag 'gold'
+machine 'lab-gitlab' do
+  tag 'lab'
   machine_options options
   converge true
   recipe 'kris::gitlab'

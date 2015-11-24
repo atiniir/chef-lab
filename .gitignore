@@ -10,3 +10,4 @@
 .chef/vms
 .vagrant
 .DS_Store
+vendor
