@@ -11,7 +11,9 @@ provisioner:
 #   name: inspec
 
 platforms:
-  - name: centos-7.1
+  - name: centos-6.7
+    driver:
+      box: bento/centos-6.7
 
 suites:
   - name: default
