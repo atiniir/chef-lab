@@ -45,13 +45,13 @@ EOF
     /bin/cat > settings.json <<EOF
     {
       "chef-server": {
-      "configuration": "notification_email 'kstewart@ea.com'",
+      "configuration": "notification_email 'kristan.stewart@gmail.com'",
       "addons": [
          "manage"
        ]
        },
        "run_list":[
-       "recipe[chef-server::default]","recipe[chef-server::addons]"
+       "recipe[chef-server::default]","recipe[chef-server::addons]","recipe[jenkins::master]"
        ]
     }
 EOF
