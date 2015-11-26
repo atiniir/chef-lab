@@ -17,6 +17,7 @@ driver:
 #   use_dns: true/false
 #   tenant: vsphere.local
 #   requested_for: email@example.com
+#   server_ready_sleep_time: xx
 #   server_ready_retries: xx
 #   base_url: https://vraapp1.example.com
 #   username: 
@@ -40,20 +41,20 @@ platforms:
     communicator: ssh
     username: vagrant
     password: vagrant
+# - name: os-vra
+#   driver:
+#     catalog_id: 
+#     subtenant_id: 
+#     lease_days: 
+#     request_timeout: 
+#     extra_parameters:
+#       provider-hostname:
+#         type: string
+#         value: 
+#       provider-Vrm.DataCenter.Location:
+#         type: string
+#         value: 
 
-- name: centos-6.7-vra
-  driver:
-    catalog_id: e529a05f-42f8-4dac-a7c5-637b5b9cd1bc
-    subtenant_id: fd5d55f3-32a3-4d86-8b09-a75c58d79a82
-    lease_days: 2
-    request_timeout: 7200
-    extra_parameters:
-      provider-hostname:
-        type: string
-        value: 
-      provider-Vrm.DataCenter.Location:
-        type: string
-        value: 
 
 suites:
   - name: default
