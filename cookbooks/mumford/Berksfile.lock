@@ -1,0 +1,43 @@
+DEPENDENCIES
+  berkit
+    path: .
+    metadata: true
+  britomartis
+    path: ../britomartis
+  kris
+    path: ../kris
+  quick_start (~> 0.7.0)
+
+GRAPH
+  apt (2.9.2)
+  apt-chef (0.2.0)
+    apt (>= 0.0.0)
+  berkit (0.0.0)
+  britomartis (0.1.0)
+    git (~> 4.3)
+  build-essential (2.2.4)
+  chef-dk (3.1.0)
+    dmg (~> 2.2)
+  chef-ingredient (0.11.3)
+    apt-chef (>= 0.0.0)
+    yum-chef (>= 0.0.0)
+  chef-server (4.1.0)
+    chef-ingredient (>= 0.11.0)
+  chef_handler (1.2.0)
+  dmg (2.3.0)
+  git (4.3.4)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  kris (0.1.0)
+    chef-dk (>= 0.0.0)
+    chef-server (>= 0.0.0)
+  quick_start (0.7.0)
+  windows (1.38.4)
+    chef_handler (>= 0.0.0)
+  yum (3.8.2)
+  yum-chef (0.2.1)
+    yum (>= 3.2)
+  yum-epel (0.6.5)
+    yum (~> 3.2)

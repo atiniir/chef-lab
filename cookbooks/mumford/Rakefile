@@ -1,0 +1,6 @@
+  task :default => ['a_la_peanut_butter_sandwiches']
+
+ task :a_la_peanut_butter_sandwiches do
+    puts "Making your cookbooks repo @ ../../../chef-repo/cookbooks"
+    `berks vendor ../../../chef-repo/cookbooks`
+ end

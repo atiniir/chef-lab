@@ -1,0 +1,9 @@
+
+source 'https://supermarket.chef.io'
+
+metadata
+
+
+cookbook 'quick_start', '~> 0.7.0'
+cookbook 'kris', path: '../kris'
+cookbook 'britomartis', path: '../britomartis'
