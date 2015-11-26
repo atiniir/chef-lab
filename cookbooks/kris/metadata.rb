@@ -1,4 +1,4 @@
-name             'Kristan Stewart'
+name             'kris'
 maintainer       'Kristan Stewart'
 maintainer_email 'kristan.stewart@gmail.com'
 license          'All rights reserved'
