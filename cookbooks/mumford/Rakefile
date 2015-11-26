@@ -1,6 +1,14 @@
-  task :default => ['a_la_peanut_butter_sandwiches']
+ 
+ # could make this nifty by checking for ../../../chef-repo and if not found running :intro automatically
+
+
+ task :default => ['a_la_peanut_butter_sandwiches']
 
  task :a_la_peanut_butter_sandwiches do
     puts "Making your cookbooks repo @ ../../../chef-repo/cookbooks"
     `berks vendor ../../../chef-repo/cookbooks`
+ end
+
+ task :intro do 
+ 	`chef generate repo ../../../chef-repo'
  end
