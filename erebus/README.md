@@ -6,6 +6,8 @@ recipes for creating local machine development environment with
 * chefdk 
 ** provisioning 
 
+kris cookbook also used 
+
 this is the chef version of hephaestus 
 
 
