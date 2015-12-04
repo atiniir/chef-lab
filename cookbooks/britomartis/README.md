@@ -1,4 +1,3 @@
 # britomartis
 
-TODO: Enter the cookbook description here.
-
+Basic cookbook to exercise vagrant and vra kitchening

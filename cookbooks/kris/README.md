@@ -1,6 +1,7 @@
 kris Cookbook
 =============
-TODO: Enter the cookbook description here.
+
+Collection of recipes to create machines for local chef development 
 
 e.g.
 This cookbook makes your favorite breakfast sandwich.
