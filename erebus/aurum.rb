@@ -14,6 +14,6 @@ machine 'aurum' do
   tag 'gold'
   machine_options options
   converge true
-  recipe 'kris::workstation'
+  run_list [ 'britomartis::default','git::default' ] 
 end
 
