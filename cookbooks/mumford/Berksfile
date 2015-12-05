@@ -3,7 +3,12 @@ source 'https://supermarket.chef.io'
 
 metadata
 
+group :ea do
+	cookbook 'kris', path: '../kris'
+	cookbook 'britomartis', path: '../britomartis'
+end 
 
-cookbook 'quick_start', '~> 0.7.0'
-cookbook 'kris', path: '../kris'
-cookbook 'britomartis', path: '../britomartis'
+group :community do
+	cookbook 'quick_start', '~> 0.7.0'
+	cookbook 'git', '~> 4.3.4'
+end 
