@@ -12,7 +12,7 @@ with_driver 'vagrant'
 #  'vm.cpus' => '1'
 #}
 
-with_chef_local_server :chef_repo_path => '~/Lab/chef-repo'
+with_chef_local_server :chef_repo_path => '~/Desktop/Lab/chef-repo'
 
 #with_chef_server "https://chef-server.example.org",
 #  :client_name => Chef::Config[:node_name],
