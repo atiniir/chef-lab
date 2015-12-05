@@ -16,12 +16,12 @@ driver:
 #   verify_ssl: true/false
 #   use_dns: true/false
 #   tenant: vsphere.local
-#   requested_for: email@example.com
+#   requested_for: hippo@example.com
 #   server_ready_sleep_time: xx
 #   server_ready_retries: xx
-#   base_url: https://vraapp1.example.com
-#   username: 
-#   password: 
+#   base_url: https://vraapp.example.com
+#   username: hippo
+#   password: p0tamus
 
 
 provisioner:
