@@ -12,3 +12,4 @@
 .DS_Store
 vendor
 .kitchen.local.yml
+.chef/knife.local.rb
