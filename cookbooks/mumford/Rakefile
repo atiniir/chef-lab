@@ -10,5 +10,7 @@
  end
 
  task :intro do 
- 	`chef generate repo ../../../chef-repo'
+ 	puts "checking for existing repo"
+ 	File.directory? "../../../chef-repo"
+ 	`chef generate repo ../../../chef-repo`
  end
